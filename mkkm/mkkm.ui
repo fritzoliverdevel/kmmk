@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>442</width>
+    <height>244</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="mkkm.qrc">
+    <normaloff>:/images/cpp.png</normaloff>:/images/cpp.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="kilepes">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>160</y>
+      <width>91</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>Kilépés</string>
+    </property>
+    <property name="text">
+     <string>Kilépés</string>
+    </property>
+    <property name="icon">
+     <iconset resource="mkkm.qrc">
+      <normaloff>:/images/exit.png</normaloff>:/images/exit.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="calc_2">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>100</y>
+      <width>80</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>add meg mérföldben!</string>
+    </property>
+    <property name="text">
+     <string>Számolás</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="calc">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>40</y>
+      <width>80</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>add meg kilóméterben!</string>
+    </property>
+    <property name="text">
+     <string>Számolás</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="km">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>35</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>km</string>
+    </property>
+    <property name="placeholderText">
+     <string>kilóméter</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="mk">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>90</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>mk</string>
+    </property>
+    <property name="placeholderText">
+     <string>mérföld</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>46</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>kilóméter:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>100</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>mérföld:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>442</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMen">
+    <property name="title">
+     <string>&amp;Menü</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action_Kil_p_s"/>
+    <addaction name="separator"/>
+    <addaction name="action_Alap_km"/>
+    <addaction name="actionA_lap_mk"/>
+   </widget>
+   <addaction name="menuMen"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_Kil_p_s">
+   <property name="icon">
+    <iconset resource="mkkm.qrc">
+     <normaloff>:/images/exit.png</normaloff>:/images/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Kilépés</string>
+   </property>
+  </action>
+  <action name="action_Alap_km">
+   <property name="text">
+    <string>&amp;Alap km</string>
+   </property>
+  </action>
+  <action name="actionA_lap_mk">
+   <property name="text">
+    <string>A&amp;lap mk</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="mkkm.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>kilepes</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>389</x>
+     <y>215</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>246</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Kil_p_s</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>246</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
